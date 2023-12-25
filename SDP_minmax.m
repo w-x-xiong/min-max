@@ -20,8 +20,8 @@ t >= 0;
 
 for m = 1:M
     for l = 1:L
-        (Rg(m,l) - rho)^2 + gmt_vec(m) + 2*(Rg(m,l) - rho)*dmt_vec(m) <= gls_vec(l);
-        (Rg(m,l) + rho)^2 + gmt_vec(m) + 2*(Rg(m,l) + rho)*dmt_vec(m) >= gls_vec(l);
+        (Rg(m,l) - rho)^2 + gmt_vec(m) - 2*(Rg(m,l) - rho)*dmt_vec(m) <= gls_vec(l);
+        (Rg(m,l) + rho)^2 + gmt_vec(m) - 2*(Rg(m,l) + rho)*dmt_vec(m) >= gls_vec(l);
     end
 end
 
